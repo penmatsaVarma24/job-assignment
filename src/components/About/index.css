@@ -1,0 +1,54 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    font-family: 'Segoe UI';
+}
+
+.about-desc-container {
+    width: 50%;
+}
+
+.para-about-item {
+    font-size: 14px;
+}
+
+.about-heading {
+    font-size: 36px;
+}
+
+.span-about-item {
+    font-size: 24px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.yellow-image {
+    width: 30%;
+}
+
+.image-about-container {
+    background-image: url('../../../public/Vector3.png');
+    width: 20%;
+    height: 900px;
+    background-size: cover;
+}
+
+.hand-container {
+    width: 20%;
+}
+
+.hand-image-container {
+    background-image: url('../../../public/Vector4.png');
+    background-size: cover;
+}
+
+.hand-image {
+    width:100%;
+}
