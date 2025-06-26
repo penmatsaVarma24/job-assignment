@@ -2,13 +2,19 @@ import './index.css';
 
 import Navbar from '../Navbar';
 import SocialIcons from '../SocialIcons';
+import { useContext } from 'react';
+import themeContext from '../../context/themeContext';
 
 const Home = () => {
+    const {theme} = useContext(themeContext);
+
+    const color_css = theme === 'dark' ? 'dark-theme' : '';
+
     return (
-        <div className="main-container">
+        <div className={`main-container ${color_css}`}>
             <Navbar />
             <div className="home-container">
-                <div className="home-icons-container">
+                <div className={`home-icons-container ${color_css}`}>
                     <SocialIcons />
                 </div>
                 <div className="details-container">

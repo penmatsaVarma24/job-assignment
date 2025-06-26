@@ -4,6 +4,20 @@
     align-items: flex-start;
     width: 100%;
     font-family: 'Segoe UI';
+    min-height: 90vh;
+}
+
+.dark-theme {
+    background-color: #161515;
+    color: #ffffff;
+}
+
+.light-line {
+    background-color: #000000;
+}
+
+.dark-line {
+    background-color: #ffffff;
 }
 
 .about-desc-container {
@@ -16,10 +30,39 @@
 
 .about-heading {
     font-size: 36px;
+    width: 30%;
 }
 
 .span-about-item {
     font-size: 24px;
+}
+
+.span-bold-item {
+    font-weight: 600;
+}
+
+.social-icons-container {
+    margin-top: -80px;
+    background-color: transparent;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.line-through {
+    width: 50%;
+    height: 1px;
+    flex-grow: 1;
+}
+
+.line-between {
+    width: 30%;
+    height: 1px;
+    align-self: flex-start;
+    margin-top: 30px;
 }
 
 .images-container {
@@ -30,13 +73,19 @@
 }
 
 .yellow-image {
-    width: 30%;
+    width: 35%;
+    margin-left: -100px;
+    height: 200px;
+}
+
+.grey-image {
+    width: 35%;
 }
 
 .image-about-container {
     background-image: url('../../../public/Vector3.png');
     width: 20%;
-    height: 900px;
+    height: 600px;
     background-size: cover;
 }
 

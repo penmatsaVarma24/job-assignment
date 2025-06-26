@@ -1,20 +1,30 @@
+import { useCallback, useContext } from 'react';
 import './index.css';
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { TbBrandGithubFilled } from "react-icons/tb";
+import themeContext from '../../context/themeContext';
 
 
 const SocialIcons = () => {
+    const {theme} = useContext(themeContext);
+
+    const color_css = theme === 'dark' ? 'dark-theme' : '';
+
+    const dark = theme === 'dark' ? 'dark-btn' : 'light-btn';
+
+    const dark_koo = theme === 'light' ? 'Koo Black.png' : 'Koo Dark.png';
+
     return (
         <div className="icons-container">
-            <button className="btn"><FaFacebookF /></button>
-            <button className="btn"><ImInstagram /></button>
-            <button className="btn"><FaTwitter /></button>
-            <button className="btn"><TbBrandGithubFilled /></button>
-            <button className="btn"><FaLinkedinIn /></button>
-            <button className="btn"><FaTelegramPlane /></button>
-            <button className="btn"><img src="Koo Black.png" alt="Koo" className="Koo-image"/></button>
+            <button className={`btn ${dark}`}><FaFacebookF className={color_css}/></button>
+            <button className={`btn ${dark}`}><ImInstagram  className={color_css}/></button>
+            <button className={`btn ${dark}`}><FaTwitter  className={color_css}/></button>
+            <button className={`btn ${dark}`}><TbBrandGithubFilled  className={color_css}/></button>
+            <button className={`btn ${dark}`}><FaLinkedinIn  className={color_css}/></button>
+            <button className={`btn ${dark}`}><FaTelegramPlane  className={color_css}/></button>
+            <button className={`btn ${dark}`}><img src={dark_koo} alt="Koo" className="Koo-image"/></button>
         </div>
     )
 }

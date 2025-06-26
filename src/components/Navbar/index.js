@@ -13,18 +13,22 @@ const Navbar = () => {
 
     const theme_image = theme === 'light' ? 'Moon.png' : 'Sun.png';
 
+    const logo_image = theme === 'light' ? 'Logo.png' : 'dark_logo.png';
+
+    const color_css = theme === 'dark' ? 'dark-theme' : '';
+
     return (
         <div className="navbar-container">
             <div className="logo-container">
-                <img src="Logo.png" className="logo-image" alt="logo" />
+                <img src={logo_image} className='logo-image' alt="logo" />
                 <p className="logo-name">ANISH KUMAR SINHA</p>
             </div>
             <div className="routes-container">
-                <Link to="/" className="link-item">
-                    <p className="route">Home</p>
+                <Link to="/" className='link-item'>
+                    <p className={`route ${color_css}`}>Home</p>
                 </Link>
-                <Link to="/about" className="link-item">
-                    <p className="route">About</p>
+                <Link to="/about" className='link-item'>
+                    <p className={`route ${color_css}`}>About</p>
                 </Link>
                 <p className="route">Resume</p>
                 <p className="route">Skills</p>
